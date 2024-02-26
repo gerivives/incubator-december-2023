@@ -116,7 +116,7 @@ class FirestoreDatabase:
                 stock_data = stock_doc.to_dict()
                 # Directly format the DatetimeWithNanoseconds object
                 formatted_datetime = stock_data['date'].strftime("%d %B %Y, %I:%M %p")
-                # Add formatted datetime to your stock data or use it as needed
+                # Add new formatted datetime to the stock data
                 stock_data['formatted_date'] = formatted_datetime
                 stocks.append(stock_data)
 

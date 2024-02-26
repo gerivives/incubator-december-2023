@@ -131,12 +131,13 @@ if wh_result != 1:
     print(f"\n**ERROR** problem with your webhooks ({wh_result})")
     exit()
 
+#___3 init firestore db instance
 firestore_db = FirestoreDatabase(os.getenv('FIRESTORE_KEY_PATH'))
 if firestore_db.db is None:
     print(f"\n**ERROR** problem initializing firestore database")
     exit()
 
-#___3 run webserver
+#___4 run webserver
 app.run(host='0.0.0.0', port=webserver_port, debug=webserver_debug)  # to skip restart-on-save, add: use_reloader=False
 
 

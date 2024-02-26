@@ -2,7 +2,7 @@ import os
 import requests
 
 def get_stock_price(ticker):
-    # Set your API key and stock symbol
+    # Set the API key and stock symbol
     API_KEY = os.getenv('VANTAGE_API_KEY')
 
     # API endpoint URL
